@@ -1,0 +1,33 @@
+@import url("https://googleapis.com");
+body {
+  background-color: #73a1b2;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #ffffff;
+}
+
+.title {
+  color: #ffffff;
+  background-color: #73a1b2;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.form-textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  resize: none;
+  width: 400px;
+  height: 150px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-group {
+  margin-top: 20px;
+}/*# sourceMappingURL=styles.css.map */

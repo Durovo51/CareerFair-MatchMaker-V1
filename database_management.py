@@ -9,14 +9,15 @@ class DatabaseManager:
         self.setup_table()
 
     def setup_table(self):
-        self.cursor.execute("""CREATE TABLE IF NOT EXISTS employers (
-                            company text,
-                            employment_type text,
-                            sponsors_visas text,
-                            majors text,
-                            degree_level text
-                            )""")
-        self.connection.commit()
+        if self is not None:
+            self.cursor.execute("""CREATE TABLE IF NOT EXISTS employers (
+                                company text UNIQUE,
+                                employment_type text,
+                                sponsors_visas text,
+                                majors text,
+                                degree_level text
+                                )""")
+            self.connection.commit()
 
     def add_employer(self, name, employment_type, visa_status, majors, degree_level):
         self.cursor.execute("INSERT INTO employers VALUES (?, ?, ?, ?, ?)", 
@@ -25,6 +26,10 @@ class DatabaseManager:
     def commit_changes(self):
         self.connection.commit()
 
-    # Fixed: Renamed to match the main block below
+    def clear_old_data(self):
+        self.cursor.execute("DELETE FROM employers")
+        self.connection.commit()
+        print("Data cleared from the employers table.")
+    
     def close(self):
         self.connection.close()
