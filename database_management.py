@@ -17,7 +17,7 @@ class DatabaseManager:
                                 majors text,
                                 degree_level text
                                 )""")
-            self.connection.commit()
+            
 
     def add_employer(self, name, employment_type, visa_status, majors, degree_level):
         self.cursor.execute("INSERT INTO employers VALUES (?, ?, ?, ?, ?)", 
@@ -33,3 +33,11 @@ class DatabaseManager:
     
     def close(self):
         self.connection.close()
+        
+    def store_all_data_as_string(self):
+        self.cursor.execute("SELECT * FROM employers")
+        rows = self.cursor.fetchall()
+        company_data = ""
+        for row in rows:
+            company_data += f"Company: {row[0]}, Employment Type: {row[1]}, Sponsors Visas: {row[2]}, Majors: {row[3]}, Degree Level: {row[4]}\n"
+        return company_data

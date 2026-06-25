@@ -1,31 +1,27 @@
-    <!DOCTYPE html>
-    <div class="title">
-    
-    <html lang="en">
-        <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
-        <title>Booth Matchmaker</title>
-    </head>
-    <body>
-        <h1>Welcome to Booth Matchmaker!</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Booth Matchmaker</title>
+</head>
+<body>
+    <h1 class="title">Welcome to Booth Matchmaker!</h1>
+
+    <main class="container">
+        <section class="card">
+            <p class="card-description">Paste your resume below to match it with companies visiting UW's next career fair.</p>
+            
+            <form class="card-form" action="/match" method="POST">
+                <div class="form-group">
+                    <textarea id="company-info" name="resume" class="form-textarea" placeholder="Paste resume here..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn-submit">Analyze & Match</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
 </html>
-</div>
-
-
-<main class="container">
-    <section class="card">
-        <p class="card-description">Paste your resume below to match it with companies visiting UW's next career fair.</p>
-        
-        <form class="card-form">
-            <div class="form-group">
-                <textarea id="company-info" class="form-textarea" placeholder="Paste resume here..."></textarea>
-            </div>
-            <div class="button-group">
-                <button type="submit" class="btn-submit">Analyze & Match</button>
-            </div>
-        </form>
-    </section>
-</main>
