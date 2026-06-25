@@ -1,10 +1,9 @@
-import app
 import database_management
 
 db_manager = database_management.DatabaseManager()
 company_data = db_manager.store_all_data_as_string()
 
-promptText = f"Act as an expert technical recruiter and automated resume-to-company parsing engine. Your sole objective is to analyze a "
+promptText = ( f"Act as an expert technical recruiter and automated resume-to-company parsing engine. Your sole objective is to analyze a "
 + "candidate's resume, infer their career fair constraints, and match them against a list of company data to maximize their chances of "
 + "securing a position.\n\nCRITICAL CONSTRAINT: You are a strict data-processing pipe. Do not ask follow-up questions, do not request "
 + "clarification, and do not include any introductory text, concluding remarks, or conversational filler. Output only the specified list " 
@@ -24,4 +23,4 @@ promptText = f"Act as an expert technical recruiter and automated resume-to-comp
 + "filtered out. Format the output exactly as follows:\n\n1. [Company Name]\n* Pitch Strategy: [One concise sentence explaining exactly "
 + "which specific project, tool, or experience from the resume the candidate should highlight when speaking to this specific company at "
 + "their booth.]\n\n***\nRESUME:\n{user_resume_data}\n\nCOMPANY DATA:\n{company_data}\n\nEND OF INPUT. PROVIDE ONLY THE MATCHED COMPANY "
-+ "LIST IN THE SPECIFIED FORMAT."
++ "LIST IN THE SPECIFIED FORMAT.")
