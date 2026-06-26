@@ -3,14 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Booth Matchmaker</title>
     <meta name="theme-color" content="#fafafa">
   </head>
+  <h1 class="title">These are the companies that match your profile:</h1>
   <body>
-    <p>These are the companies that match your profile: {{ booth_recomendations }}</p>
-    
+    <p class="booth-recommendations"> {{ booth_recomendations }}</p>
     <script src="js/main.js"></script>
   </body>
+
+  
+
+    
 </html>
