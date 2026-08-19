@@ -62,6 +62,11 @@ body {
 .booth-recommendations {
   white-space: pre-line;
   max-width: 700px;
-  font: "Montserrat", sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Montserrat", sans-serif; 
   font-size: 20px;
+
+
+
 }/*# sourceMappingURL=styles.css.map */

@@ -28,9 +28,9 @@ promptText = ( f"Act as an expert technical recruiter and automated resume-to-co
 + "Return ONLY the prioritized list of matching companies, or the single no-matches line specified in Step 4. Do not explain your "
 + "reasoning or list companies that were filtered out. Each numbered company entry MUST start on its own new line, with a blank line "
 + "separating it from the previous entry, so the result reads as a clearly separated list rather than a single continuous paragraph. "
-+ "Format the output exactly as follows, preserving every line break shown:\n\n1. [Company Name]\n* Pitch Strategy: [One concise sentence explaining exactly "
++ "Format the output exactly as follows, preserving every line break shown:\n\n1. [Company Name]\n* Company Breakdown: [1-2 concise sentences summarizing what the company does and the most relevant context a prospective intern/employee needs to know to hold a conversation at their booth.]\n* Pitch Strategy: [One concise sentence explaining exactly "
 + "which specific project, tool, or experience from the resume the candidate should highlight when speaking to this specific company at "
-+ "their booth.]\n\n2. [Company Name]\n* Pitch Strategy: [...]\n\n3. [Company Name]\n* Pitch Strategy: [...]\n\n***\nRESUME:\n{user_resume_data}\n\nCOMPANY DATA:\n{company_data}\n\nEND OF INPUT. PROVIDE ONLY THE MATCHED COMPANY "
++ "their booth.]\n\n2. [Company Name]\n* Company Breakdown: [...]\n* Pitch Strategy: [...]\n\n3. [Company Name]\n* Company Breakdown: [...]\n* Pitch Strategy: [...]\n\n***\nRESUME:\n{user_resume_data}\n\nCOMPANY DATA:\n{company_data}\n\nEND OF INPUT. PROVIDE ONLY THE MATCHED COMPANY "
 + "LIST OR THE NO-MATCHES LINE, IN THE SPECIFIED FORMAT.")
 
 # promptText = ( f"Act as an expert technical recruiter and automated resume-to-company parsing engine. Your sole objective is to analyze a "

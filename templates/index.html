@@ -1,27 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Booth Matchmaker</title>
-</head>
-<body>
-    <h1 class="title">Welcome to Booth Matchmaker!</h1>
+{% extends "base.html" %}
+{% block content %}
 
-    <main class="container">
-        <section class="card">
-            <p class="card-description">Paste your resume below to match it with companies visiting UW's next career fair.</p>
-            
-            <form class="card-form" action="/match" method="POST">
-                <div class="form-group">
-                    <textarea id="company-info" name="resume" class="form-textarea" placeholder="Paste resume here..."></textarea>
-                </div>
-                <div class="button-group">
-                    <button type="submit" class="btn-submit">Analyze & Match</button>
-                </div>
-            </form>
-        </section>
-    </main>
-</body>
-</html>
+<div style="height: 2rem;"></div>
+<div class = "text-xl text-center text-grey-700 mb-12 font-light">
+Simply copy and paste your resume in full and get recommended companies to talk to at the CAI Fall 2026 career fair with specific talking points relevent to your expericences
+<div/>
+<div style="height: 2rem;"></div>
+
+
+<form action="/match" method="POST" class="space-y-4">
+    <textarea name="resume" rows="10"
+        class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        placeholder="Paste your resume text here..."></textarea>
+
+    <button type="submit"
+        class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+        Get My Game Plan
+    </button>
+</form>
+
+<div style="height: 3rem;"></div>
+<div class = "text-xs text-center text-grey-700 mb-12 font-light">
+(Your resume is used only to generate personalized company recommendations for this session.
+    It is not stored, sold, or shared with third parties.)
+<div/>
+{% endblock %}
