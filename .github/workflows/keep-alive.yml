@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping the site
-        run: curl -s -o /dev/null -w "%{http_code}" https://your-app.onrender.com
+        run: curl -s -o /dev/null -w "%{http_code}" https://careerfair-matchmaker-v1.onrender.com
