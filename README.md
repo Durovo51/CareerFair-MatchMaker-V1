@@ -4,7 +4,11 @@ A web application designed to optimize the career fair experience. By analyzing 
 
 ## 💻 Tech Stack
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![OpenAI](https://img.shields.io/badge/OpenAI-412991.svg?style=for-the-badge&logo=OpenAI&logoColor=white) 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![OpenAI](https://img.shields.io/badge/OpenAI-412991.svg?style=for-the-badge&logo=OpenAI&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+**Frontend**
+* **Tailwind CSS:** Gives the site a modern, responsive, and clean user interface using utility-first styling.
+  
 
 **Backend & Framework**
 * **Python:** Handles the core application logic and data processing.
@@ -15,4 +19,4 @@ A web application designed to optimize the career fair experience. By analyzing 
 
 **Data & Architecture**
 * **SQLite:** Relational database for storing structured data and efficiently feeding context to the LLM.
-* **Beautiful Soup:** Web scraping library utilized to collect, parse, and structure relevant information on companies attending the fair.
+
