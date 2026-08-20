@@ -21,6 +21,9 @@ def match_resume():
 
     raw_output = ai_api.get_booth_recommendations(user_resume_data)
     booth_recomendations = parse_booth_recommendations(raw_output)
+    print(f"Parsed {len(booth_recomendations)} recommendations")    
+    
+    
 
     return render_template(
         'match.html',
@@ -49,6 +52,8 @@ def parse_booth_recommendations(raw_output):
 )
 
     results = []
+    
+    
     for match in pattern.finditer(raw_output):
         company = match.group('company').strip()
         breakdown = match.group('breakdown').strip()

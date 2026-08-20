@@ -4,3 +4,4 @@ venv/
 __pycache__/
 *.dbemployer.db
 __pycache__/
+website_data.db
