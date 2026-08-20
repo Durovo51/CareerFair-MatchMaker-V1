@@ -20,5 +20,6 @@ A web application designed to optimize the career fair experience. By analyzing 
 **Data & Architecture**
 * **SQLite:** Relational database for storing structured data and efficiently feeding context to the LLM.
 
-* Link to Website: https://careerfair-matchmaker-v1.onrender.com/
+
+ **Link to Website: https://careerfair-matchmaker-v1.onrender.com**
 
