@@ -16,3 +16,5 @@ A web application designed to optimize the career fair experience. By analyzing 
 **Data & Architecture**
 * **SQLite:** Relational database for storing structured data and efficiently feeding context to the LLM.
 * **Beautiful Soup:** Web scraping library utilized to collect, parse, and structure relevant information on companies attending the fair.
+
+Try it here: https://careerfair-matchmaker-v1.onrender.com/
